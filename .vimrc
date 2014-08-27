@@ -27,6 +27,7 @@ if &t_Co > 2 || has("gui_running")
   au BufNewFile,BufRead *.lis                      so $VIM/syntax/c.vim
   au BufNewFile,BufRead *.anrichar                 so $VIM/syntax/c.vim
   au BufNewFile,BufRead *.i                        so $VIM/syntax/c.vim
+  au FileType c,cpp,objc,objcpp call rainbow#load()
 
 set hlsearch " Hightlight search terms
 set incsearch " Show search matches as you type
@@ -41,6 +42,7 @@ set incsearch " Show search matches as you type
   hi Type     term=underline ctermfg=DarkMagenta guifg=SeaGreen gui=bold
 "  hi Ignore   ctermfg=white guifg=bg
   hi LineNr   ctermfg=DarkBlue
+   hi MatchParen cterm=none ctermbg=green ctermfg=blue
 
 endif
 
