@@ -13,6 +13,8 @@ set autochdir
 "set titlestring=%(\ %{$CLEARCASE_ROOT}:\ %)%(\ %F%)
 "set statusline=%<%f%h%m%r%=%{$CLEARCASE_ROOT}\ %l,%c%V\ %P
 
+".swp files go into the same directory
+set directory=.
 
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -56,6 +58,8 @@ map [21~ ostd::cout << "ALR " << __FUNCTION__ << std::endl;
 map [23~ :set filetype=java
 map [24~ :set filetype=c
 map [19~ :%s/.//
+map [2~ +
+map [3~ -
 
 
 filetype on
